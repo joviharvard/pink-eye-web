@@ -13,7 +13,11 @@ const AppRouter = () => (
         exact={value.exact}
         render={props => (
           <value.routeComponent>
-            <value.component {...props} />
+            <value.component
+              {...props}
+              rightComponent={value.rightComponent}
+              leftComponent={value.leftComponent}
+            />
           </value.routeComponent>
         )}
       />

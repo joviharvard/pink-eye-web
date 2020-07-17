@@ -7,17 +7,16 @@ const PublicRoute = ({ children, error, ...rest }) => {
   return (
     <Route
       {...rest}
-      render={() => (!isSignedIn ? (
-        <>
-          {/* Add any unauthenticated-specific components, such as an logged-out navbar, here */}
-          {children}
-        </>
-      ) : (
-        <>
-          {/* Add any authenticated-specific components, such as an logged-in navbar, here */}
-          {children}
-        </>
-      ))}
+      render={() =>
+        !isSignedIn ? (
+          <>{children}</>
+        ) : (
+          <>
+            {/* Add any authenticated-specific components, such as an logged-in navbar, here */}
+            {children}
+          </>
+        )
+      }
     />
   )
 }
