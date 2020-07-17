@@ -3,4 +3,7 @@
 export const ROUTE_PATHS = {
   HOME: '/',
   LOGIN: '/login',
+  REVIEWS: '/reviews',
+  SUBMIT: '/submit',
+  MERCH: '/merch'
 }

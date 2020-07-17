@@ -17,13 +17,15 @@
     "husky": "^4.2.5",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-rating": "^2.0.5",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.1",
     "styled-components": "^4.4.0",
     "yup": "^0.28.4"
   },
   "devDependencies": {
-    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0"

@@ -11,7 +11,6 @@ import history from './history'
 import GlobalContext from './utils/globalContext'
 import AppRouter from './routes/AppRouter'
 
-
 const App = () => {
   const [apolloClient, setApolloClient] = useState(undefined)
 
@@ -34,9 +33,9 @@ const App = () => {
     <GlobalContext>
       <Router history={history}>
         <ThemeProvider theme={theme}>
-          <ApolloProvider client={apolloClient}>
-            <AppRouter />
-          </ApolloProvider>
+          {/* <ApolloProvider client={apolloClient}> */}
+          <AppRouter />
+          {/* </ApolloProvider> */}
         </ThemeProvider>
       </Router>
     </GlobalContext>
