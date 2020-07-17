@@ -64,7 +64,7 @@ export const ButtonBackground = styled.div`
   ${ButtonContainer}:hover & {
     background: url(${hoverEye}) no-repeat content-box center;
     background-size: 160px 160px;
-    transition: background 0.65s ease-out;
+    transition: background 0.4s ease-out;
   }
   ${ButtonContainer}:active & {
     background: url(${clickedEye}) no-repeat content-box center;

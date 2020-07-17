@@ -5,7 +5,7 @@ import Reviews from '../containers/Reviews'
 import MainContainer from '../containers/MainContainer'
 import AboutBox from '../components/AboutBox'
 import Submit from '../containers/Submit'
-// import Submit from '../containers/Submit'
+import FilterBox from '../components/FilterBox'
 
 import { ROUTE_PATHS } from '../utils/constants'
 
@@ -31,7 +31,7 @@ export const routes = {
     path: ROUTE_PATHS.REVIEWS,
     routeComponent: PublicRoute,
     component: MainContainer,
-    leftComponent: AboutBox,
+    leftComponent: FilterBox,
     rightComponent: Reviews,
     exact: true,
   },
