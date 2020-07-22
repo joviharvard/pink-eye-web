@@ -15,13 +15,14 @@ export const Container = styled.div`
     transition: box-shadow 0.3s ease-out;
   }
   overflow-y: scroll;
+  scrollbar-color: red yellow;
 `
 
 export const HeaderBox = styled.div`
   width: 75%;
   height: 20%;
-  margin-top: 30px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,6 +34,7 @@ export const HeaderBox = styled.div`
     box-shadow: inset -6px -6px 0px 0px ${({ theme }) => theme.colors.darkBlue};
     transition: box-shadow 0.3s ease-out;
   }
+  text-align: center;
 `
 
 export const Header = styled.p`
@@ -42,18 +44,11 @@ export const Header = styled.p`
   user-select: none;
 `
 
-export const Subheader = styled.p`
-  font-size: 14px;
-  font-family: ${({ theme }) => theme.fonts.subheader};
-  user-select: none;
-`
-
 export const Body = styled.p`
   width: 85%
-  height: 60%;
-  line-height: 120%;
   text-align: center;
-  font-size: 1em;
+  font-size: 0.95em;
+  padding-bottom: 30px;
   line-height: 120%;
   font-family: ${({ theme }) => theme.fonts.terminal};
   user-select: none;

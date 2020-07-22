@@ -21,7 +21,7 @@ function MainContainer({ rightComponent, leftComponent, ...rest }) {
           alignItems: 'flex-start',
           justifyContent: 'flex-start',
           height: '90vh',
-          width: '95vw',
+          width: '85vw',
           background: theme.colors.darkBlue,
           boxShadow: `6px 6px 0px 0px ${theme.colors.lightGreen} `,
         }}

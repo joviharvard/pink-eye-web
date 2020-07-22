@@ -27,7 +27,7 @@ const NavBox = ({ location }) => {
         }}
       >
         <HomeNav
-          isSelected={!(isReviews || isSubmit)}
+          isSelected={!(isReviews || isSubmit || isMerch )}
           onClick={() => {
             if (pathname !== ROUTE_PATHS.HOME) {
               history.push({
