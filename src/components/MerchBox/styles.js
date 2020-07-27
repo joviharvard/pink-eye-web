@@ -21,7 +21,7 @@ export const HeaderBox = styled.div`
   width: 75%;
   height: 20%;
   margin-top: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;

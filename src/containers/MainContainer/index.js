@@ -27,7 +27,7 @@ function MainContainer({ rightComponent, leftComponent, ...rest }) {
         }}
       >
         <LeftBox leftComponent={leftComponent} {...rest} />
-        {rightComponent()}
+        {rightComponent({...rest})}
       </div>
     </div>
   )

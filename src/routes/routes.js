@@ -10,6 +10,7 @@ import SubmitBox from '../components/SubmitBox'
 
 import { ROUTE_PATHS } from '../utils/constants'
 import Merch from '../containers/Merch'
+import MerchBox from '../components/MerchBox'
 
 /*
  * This object's entries are a list of all routes in the app
@@ -49,7 +50,7 @@ export const routes = {
     path: ROUTE_PATHS.MERCH,
     routeComponent: PublicRoute,
     component: MainContainer,
-    leftComponent: AboutBox,
+    leftComponent: MerchBox,
     rightComponent: Merch,
     exact: true,
   },

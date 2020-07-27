@@ -49,7 +49,7 @@ export const Body = styled.p`
   text-align: center;
   font-size: 0.95em;
   padding-bottom: 30px;
-  line-height: 120%;
+  line-height: 1.5;
   font-family: ${({ theme }) => theme.fonts.terminal};
   user-select: none;
 `

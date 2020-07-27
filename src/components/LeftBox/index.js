@@ -12,7 +12,7 @@ const LeftBox = ({ leftComponent, ...rest }) => {
       }}
     >
       <NavBox {...rest} />
-      {leftComponent()}
+      {leftComponent({...rest})}
     </div>
   )
 }

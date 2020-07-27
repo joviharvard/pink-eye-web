@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import eye from '../../assets/images/hoverEyeRating.png'
-import hoverEye from '../../assets/images/emptyEye.png'
 
 export const Container = styled.div`
   width: 100%
@@ -18,6 +16,7 @@ export const Container = styled.div`
   }
   transition: box-shadow 0.3s ease;
   box-shadow: inset -4px 0px 0px 0px ${({ theme }) => theme.colors.darkBlue};
+  font-family: ${({ theme }) => theme.fonts.subheader};
 `
 
 export const Text = styled.p`
@@ -25,25 +24,15 @@ export const Text = styled.p`
   font-size: 1.3em;
   padding: 12px;
   border: 0px;
-  font-family: ${({ theme }) => theme.fonts.subheader};
 `
 
-export const SelectedEye = styled.div`
-  width: 28px;
-  height: 28px;
-  transition: background 0.3s ease-out;
-  background: url(${({ selected }) => (selected ? hoverEye : eye)}) no-repeat
-    content-box center;
-  background-size: 28px 28px;
+export const Indicator = styled.div`
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: ${({ theme }) => theme.colors.red};
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 10px;
-`
-
-export const Eye = styled.div`
-  width: 28px;
-  height: 28px;
-  margin-right: 10px;
-  ${Container}:hover & {
-    background: url(${hoverEye}) no-repeat content-box center;
-    background-size: 28px 28px;
-  }
 `
