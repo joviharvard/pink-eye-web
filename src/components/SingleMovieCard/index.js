@@ -3,11 +3,11 @@ import Rating from '../Rating'
 import { Container, InfoBox, Title, Director, Reviewer } from './styles'
 
 const SingleMovieCard = ({
-  metaData: { title, director, rating, reviewer },
+  metaData: { movieTitle, director, rating, reviewer },
 }) => (
   <Container>
     <InfoBox>
-      <Title class="unselectable"> {title} </Title>
+      <Title class="unselectable"> {movieTitle} </Title>
       <Director class="unselectable">directed by {director}</Director>
       <Rating rating={rating} />
       <Reviewer style={{ fontSize: '12px' }} class="unselectable">

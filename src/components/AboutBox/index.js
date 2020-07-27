@@ -9,10 +9,9 @@ const AboutBox = ({ ...rest }) => {
         <Subheader>PINK EYE MOVIE GOERS</Subheader>
       </HeaderBox>
       <Body>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book.
+        We love movies. This is just a platform for us to share our thoughts
+        about the movies that we've watched -- it's really that simple! You can
+        browse our reviews, or even submit a request to write your own!
       </Body>
     </Container>
   )

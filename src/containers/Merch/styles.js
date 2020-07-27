@@ -1,17 +1,18 @@
 import styled from 'styled-components'
+import cassetteClose from '../../assets/images/cassetteClose.png'
 
 const outline = '6'
 
-export const Container = styled.div`
-  width: 355px;
-  height: 355px;
+export const InnerBox = styled.div`
+  width: 75%;
+  height: 85%;
   margin: 20px;
   background: ${({ theme }) => theme.colors.green};
   transition: background 0.1s ease-out;
-  display: inline-block;
+  display: flex;
   position: relative;
   text-align: center;
-  padding: 20px;
+  padding: 8px;
   text-decoration: none;
   color: white;
   box-shadow: inset -${outline}px -${outline * 0.6}px 0px 0px
@@ -61,36 +62,14 @@ export const Container = styled.div`
   }
 `
 
-export const InfoBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space between;
-  padding: 20px;
-  text-align: center;
-  align-items: center;
-`
-
-export const Title = styled.div`
-  font-size: 48px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: ${({ theme }) => theme.fonts.header};
-  padding: 4px;
-  user-select: none;
-`
-
-export const Director = styled.p`
-  font-size: 18px;
-  font-family: ${({ theme }) => theme.fonts.subheader};
-  padding: 4px;
-  user-select: none;
-`
-
-export const Reviewer = styled.p`
-  font-size: 14px;
-  font-family: ${({ theme }) => theme.fonts.subheader};
-  padding: 4px;
-  user-select: none;
+export const UnderConstruction = styled.div`
+  width: 100%;
+  height: 100%;
+  padding-left: 45px;
+  background: url(${cassetteClose}) no-repeat content-box center;
+  background-size: 96% auto;
+  ${InnerBox}:hover & {
+    background-size: 100% auto;
+    transition: background-size 0.4s;
+  }
 `

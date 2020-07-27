@@ -15,7 +15,7 @@ export const Bar = styled.input`
   font-family: ${({ theme }) => theme.fonts.subheader};
   outline: none;
   &:focus {
-    box-shadow: inset -3px -3px 0px 0px ${({ theme }) => theme.colors.pink};
+    box-shadow: inset -3px -3px 0px 0px ${({ theme }) => theme.colors.red};
   }
 `
 
@@ -28,7 +28,7 @@ export const MultiBar = styled.textarea`
   outline: none;
   resize: none;
   &:focus {
-    box-shadow: inset -4px -4px 0px 0px ${({ theme }) => theme.colors.pink};
+    box-shadow: inset -4px -4px 0px 0px ${({ theme }) => theme.colors.red};
   }
 `
 

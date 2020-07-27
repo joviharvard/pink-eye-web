@@ -13,6 +13,24 @@ export const Container = styled.div`
   height: 100%;
 `
 
+export const InnerContainer = styled.div`
+  width: 90%;
+  height: 90%;
+  background-color: ${({ theme }) => theme.colors.blue};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.darkGreen};
+    box-shadow: inset -6px -6px 0px 0px
+      ${({ theme }) => theme.colors.lightGreen};
+    transition: background-color 0.6s ease;
+    transition: box-shadow 0.6s ease;
+  }
+`
+
 export const RangeContainer = styled.div`
   color: white;
   font-family: ${({ theme }) => theme.fonts.terminal};
@@ -33,7 +51,7 @@ export const RangeContainer = styled.div`
     width: 100%;
     height: 12px;
     background: ${({ theme, good }) =>
-      good ? theme.colors.green : theme.colors.lightGreen};
+      good ? theme.colors.orange : theme.colors.red};
     transition: background 0.4s;
     outline: none;
     -webkit-transition: 0.2s;

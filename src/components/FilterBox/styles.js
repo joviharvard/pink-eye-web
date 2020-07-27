@@ -10,10 +10,6 @@ export const Container = styled.div`
   color: white;
   box-shadow: inset -4px -4px 0px 0px ${({ theme }) => theme.colors.darkBlue};
   transition: box-shadow 0.2s ease-out;
-  &:hover {
-    box-shadow: inset -6px -6px 0px 0px ${({ theme }) => theme.colors.darkBlue};
-    transition: box-shadow 0.3s ease-out;
-  }
   justify-content: space-between;
 `
 
@@ -40,6 +36,7 @@ export const Header = styled.p`
   font-size: 1.2rem;
   font-family: ${({ theme }) => theme.fonts.terminal};
   user-select: none;
+  line-height: 1.5;
 `
 
 export const FilterContainer = styled.div`
@@ -50,10 +47,6 @@ export const FilterContainer = styled.div`
   justify-content: flex-end;
   transition: box-shadow 0.2s ease-out;
   box-shadow: inset -4px 0px 0px 0px ${({ theme }) => theme.colors.darkBlue};
-  ${Container}:hover & {
-    box-shadow: inset -6px 0px 0px 0px ${({ theme }) => theme.colors.darkBlue};
-    transition: box-shadow 0.3s ease-out;
-  }
 `
 
 export const Search = styled.div`
@@ -65,22 +58,41 @@ export const Search = styled.div`
 export const Bar = styled.input`
   width: 80%;
   font-size: 1.2em;
+  flex: 4;
   padding: 8px;
   border: 0px;
   font-family: ${({ theme }) => theme.fonts.subheader};
   outline: none;
+  &:focus {
+    box-shadow: inset 0px -3px 0px 0px ${({ theme }) => theme.colors.red};
+  }
 `
 
 export const Button = styled.button`
-  width: 20%;
+  background: ${({ theme }) => theme.colors.green}
+  flex: 1;
   font-size: 1em;
   padding: 8px;
   transition: box-shadow 0.2s ease-out;
+  transition: flex 0.4s ease;
   box-shadow: inset -4px 0px 0px 0px ${({ theme }) => theme.colors.darkBlue};
-  ${Container}:hover & {
-    box-shadow: inset -6px 0px 0px 0px ${({ theme }) => theme.colors.darkBlue};
-    transition: box-shadow 0.3s ease-out;
-  }
   border: 0px;
   outline: none;
+  ${Search}: hover & {
+    flex: 0.8;
+    transition: flex 0.4s ease;
+  }
+  &:hover {
+    background: ${({ theme }) => theme.colors.red}
+  }
+`
+
+export const Go = styled.div`
+  font-family: ${({ theme }) => theme.fonts.terminal};
+  font-size: 1.5em;
+  color: white;
+  display: none;
+  ${Button}: hover & {
+    display: inline;
+  }
 `
