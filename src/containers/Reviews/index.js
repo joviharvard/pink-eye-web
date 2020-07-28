@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useQuery } from '@apollo/react-hooks'
 import SingleMovieCard from '../../components/SingleMovieCard'
 import { GET_REVIEWS } from './graphql'
+import theme from '../../theme'
 
 const Reviews = ({ location }) => {
   const { filter } = location.state || {}
@@ -23,16 +24,21 @@ const Reviews = ({ location }) => {
         overflowY: 'scroll',
       }}
     >
-      {
-        // Implement loading state with lottie:
-        loading ? (
-          <div>Loading...</div>
-        ) : (
-          data.allReviews.map((metaData) => (
-            <SingleMovieCard metaData={metaData} />
-          ))
-        )
-      }
+      {loading ? (
+        <div
+          style={{
+            fontFamily: theme.fonts.terminal,
+            color: theme.colors.lightGreen,
+            alignSelf: 'center',
+          }}
+        >
+          LOADING...
+        </div>
+      ) : (
+        data.allReviews.map((metaData) => (
+          <SingleMovieCard metaData={metaData} />
+        ))
+      )}
     </div>
   )
 }
