@@ -1,9 +1,12 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import { UnderConstruction, InnerBox } from './styles'
 import PrimaryButton from '../../components/PrimaryButton'
 import theme from '../../theme'
+import { ROUTE_PATHS } from '../../utils/constants'
 
 const Merch = () => {
+  const history = useHistory()
   return (
     <div
       style={{
@@ -15,12 +18,13 @@ const Merch = () => {
         alignItems: 'center',
       }}
     >
-      <InnerBox>
+      <InnerBox onClick={() => history.push(ROUTE_PATHS.HOME)}>
         <UnderConstruction />
         <PrimaryButton
           text="BACK TO HOME"
           width="40%"
           style={{ position: 'absolute', zIndex: 1 }}
+          onClick={() => history.push(ROUTE_PATHS.HOME)}
         />
       </InnerBox>
     </div>

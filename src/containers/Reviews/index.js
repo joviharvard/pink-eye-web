@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useQuery } from '@apollo/react-hooks'
-import SingleMovieCard from '../../components/SingleMovieCard'
+import ReviewMap from './reviewMap'
 import { GET_REVIEWS } from './graphql'
 import theme from '../../theme'
 
@@ -35,9 +35,7 @@ const Reviews = ({ location }) => {
           LOADING...
         </div>
       ) : (
-        data.allReviews.map((metaData) => (
-          <SingleMovieCard metaData={metaData} />
-        ))
+        <ReviewMap data={data} />
       )}
     </div>
   )

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import Modal from 'react-modal'
@@ -19,7 +20,7 @@ import SelectorButton from '../SelectorButton'
 import theme from '../../theme'
 
 const customStyles = {
-  option: (provided, state) => ({
+  option: (provided, _state) => ({
     ...provided,
     background: theme.colors.pink,
     color: 'white',
@@ -38,40 +39,40 @@ const customStyles = {
       border: state.isFocused ? 0 : 0,
     },
   }),
-  dropdownIndicator: (provided, state) => ({
+  dropdownIndicator: (provided, _state) => ({
     ...provided,
     border: '0px',
     color: 'white',
     background: theme.colors.red,
   }),
-  indicatorsContainer: (provided, state) => ({
+  indicatorsContainer: (provided, _state) => ({
     ...provided,
     border: '0px',
     background: theme.colors.red,
   }),
-  clearIndicator: (provided, state) => ({
+  clearIndicator: (provided, _state) => ({
     ...provided,
     border: '0px',
     color: 'white',
   }),
-  indicatorSeparator: (provided, state) => ({
+  indicatorSeparator: (provided, _state) => ({
     ...provided,
     display: 'none',
   }),
-  multiValueLabel: (provided, state) => ({
+  multiValueLabel: (provided, _state) => ({
     ...provided,
     color: 'white',
     background: theme.colors.green,
     fontFamily: theme.fonts.subheader,
   }),
-  multiValue: (provided, state) => ({
+  multiValue: (provided, _state) => ({
     ...provided,
     color: 'white',
     background: theme.colors.green,
     fontFamily: theme.fonts.subheader,
     padding: '2px',
   }),
-  input: (provided, state) => ({
+  input: (provided, _state) => ({
     ...provided,
     fontFamily: theme.fonts.subheader,
     '& input': {
@@ -79,16 +80,16 @@ const customStyles = {
       font: 'inherit',
     },
   }),
-  placeholder: (provided, state) => ({
+  placeholder: (provided, _state) => ({
     ...provided,
     fontFamily: theme.fonts.subheader,
   }),
-  noOptionsMessage: (provided, state) => ({
+  noOptionsMessage: (provided, _state) => ({
     ...provided,
     color: 'white',
     fontFamily: theme.fonts.subheader,
   }),
-  menu: (provided, state) => ({
+  menu: (provided, _state) => ({
     ...provided,
     width: '100%',
     background: theme.colors.pink,
@@ -133,8 +134,8 @@ const FilterBox = () => {
           <Bar
             placeholder="SEARCH"
             value={search}
-            onChange={(e) => changeSearch(e.target.value)}
-            onKeyDown={(e) => {
+            onChange={e => changeSearch(e.target.value)}
+            onKeyDown={e => {
               if (e.key === 'Enter') {
                 searchFunc()
               }
@@ -202,7 +203,7 @@ const FilterBox = () => {
           isMulti
           styles={customStyles}
           value={region}
-          onChange={(val) => (val ? changeRegion(val) : changeRegion([]))}
+          onChange={val => (val ? changeRegion(val) : changeRegion([]))}
         />
       </Modal>
     </Container>
