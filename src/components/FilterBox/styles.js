@@ -11,6 +11,7 @@ export const Container = styled.div`
   box-shadow: inset -4px -4px 0px 0px ${({ theme }) => theme.colors.darkBlue};
   transition: box-shadow 0.2s ease-out;
   justify-content: space-between;
+  overflow-y: scroll;
 `
 
 export const HeaderBox = styled.div`

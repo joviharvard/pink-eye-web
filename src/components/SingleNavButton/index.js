@@ -13,9 +13,8 @@ import blueKnob from '../../assets/images/blueKnob.png'
 import greenKnob from '../../assets/images/greenKnob.png'
 import pinkKnob from '../../assets/images/pinkKnob.png'
 import theme from '../../theme'
-import { ROUTE_PATHS } from '../../utils/constants'
 
-const getButtonStyle = (color) => {
+const getButtonStyle = color => {
   switch (color) {
     case 'pink':
       return {

@@ -8,7 +8,6 @@ import {
 } from './styles'
 import PrimaryButton from '../../components/PrimaryButton'
 import PrimaryInput from '../../components/PrimaryInput'
-import theme from '../../theme'
 
 const Submit = () => {
   const [email, changeEmail] = useState('')
@@ -60,7 +59,7 @@ const Submit = () => {
               min={0}
               max={5}
               step={0.5}
-              onChange={(val) => changeRating(val.target.value)}
+              onChange={val => changeRating(val.target.value)}
             />
             <div
               className="value"
