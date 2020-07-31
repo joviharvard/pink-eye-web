@@ -56,10 +56,6 @@ export const Body = styled.p`
   user-select: none;
   padding: 4px;
   line-height: 1.5;
-  ${Container}:hover & {
-    font-size: 1.1em;
-    transition: font-size 0.3s ease-out;
-  }
 `
 
 export const Rating = styled.div`
