@@ -23,7 +23,7 @@ const customStyles = {
   option: (provided, _state) => ({
     ...provided,
     background: theme.colors.pink,
-    color: 'white',
+    color: theme.colors.whitish,
     '&:active': {
       background: theme.colors.darkPink,
     },
@@ -42,7 +42,7 @@ const customStyles = {
   dropdownIndicator: (provided, _state) => ({
     ...provided,
     border: '0px',
-    color: 'white',
+    color: theme.colors.whitish,
     background: theme.colors.red,
   }),
   indicatorsContainer: (provided, _state) => ({
@@ -53,7 +53,7 @@ const customStyles = {
   clearIndicator: (provided, _state) => ({
     ...provided,
     border: '0px',
-    color: 'white',
+    color: theme.colors.whitish,
   }),
   indicatorSeparator: (provided, _state) => ({
     ...provided,
@@ -61,13 +61,13 @@ const customStyles = {
   }),
   multiValueLabel: (provided, _state) => ({
     ...provided,
-    color: 'white',
+    color: theme.colors.whitish,
     background: theme.colors.green,
     fontFamily: theme.fonts.subheader,
   }),
   multiValue: (provided, _state) => ({
     ...provided,
-    color: 'white',
+    color: theme.colors.whitish,
     background: theme.colors.green,
     fontFamily: theme.fonts.subheader,
     padding: '2px',
@@ -86,7 +86,7 @@ const customStyles = {
   }),
   noOptionsMessage: (provided, _state) => ({
     ...provided,
-    color: 'white',
+    color: theme.colors.whitish,
     fontFamily: theme.fonts.subheader,
   }),
   menu: (provided, _state) => ({

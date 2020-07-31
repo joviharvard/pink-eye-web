@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.blue};
   align-items: center;
-  color: ${({theme}) => theme.colors.whitish};
+  color: ${({ theme }) => theme.colors.whitish};
   box-shadow: inset -4px -4px 0px 0px ${({ theme }) => theme.colors.darkBlue};
   transition: box-shadow 0.2s ease-out;
   &:hover {
@@ -37,24 +37,46 @@ export const HeaderBox = styled.div`
 
 export const Header = styled.p`
   padding: 10px;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: ${({ theme }) => theme.fonts.terminal};
   user-select: none;
+  line-height: 1.5;
 `
 
-export const Subheader = styled.p`
-  font-size: 14px;
-  font-family: ${({ theme }) => theme.fonts.subheader};
-  user-select: none;
+export const InfoContainer = styled.div`
+  width: 90%;
+  display: flex;
+  flex-direction: column;
 `
 
 export const Body = styled.p`
-  width: 85%
-  height: 60%;
-  line-height: 120%;
-  text-align: center;
+  text-align: left;
   font-size: 1em;
-  line-height: 1.5;
   font-family: ${({ theme }) => theme.fonts.terminal};
   user-select: none;
+  padding: 4px;
+  line-height: 1.5;
+`
+
+export const Rating = styled.div`
+  color: ${({ theme }) => theme.colors.whitish};
+  width: 120px;
+  height: 120px;
+  display: flex;
+  font-size: 1.5em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 120px;
+  font-family: ${({ theme }) => theme.fonts.terminal};
+  background: ${({ theme }) => theme.colors.blue};
+  border: 7px ${({ theme }) => theme.colors.whitish};
+  border-style: double;
+  align-self: flex-end;
+  margin: 20px;
+  &:hover {
+    border: 10px ${({ theme }) => theme.colors.whitish};
+    border-style: double;
+    transition: border 0.5s;
+  }
 `

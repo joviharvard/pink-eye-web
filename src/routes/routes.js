@@ -7,10 +7,12 @@ import AboutBox from '../components/AboutBox'
 import Submit from '../containers/Submit'
 import FilterBox from '../components/FilterBox'
 import SubmitBox from '../components/SubmitBox'
-
-import { ROUTE_PATHS } from '../utils/constants'
+import SingleReview from '../containers/SingleReview'
 import Merch from '../containers/Merch'
 import MerchBox from '../components/MerchBox'
+import MovieMetaBox from '../components/MovieMetaBox'
+
+import { ROUTE_PATHS } from '../utils/constants'
 
 /*
  * This object's entries are a list of all routes in the app
@@ -52,6 +54,14 @@ export const routes = {
     component: MainContainer,
     leftComponent: MerchBox,
     rightComponent: Merch,
+    exact: true,
+  },
+  review: {
+    path: ROUTE_PATHS.SINGLE_REVIEW,
+    routeComponent: PublicRoute,
+    component: MainContainer,
+    leftComponent: MovieMetaBox,
+    rightComponent: SingleReview,
     exact: true,
   },
 }

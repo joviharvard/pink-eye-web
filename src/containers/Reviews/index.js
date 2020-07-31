@@ -1,6 +1,6 @@
 import React from 'react'
 import { useQuery } from '@apollo/react-hooks'
-import ReviewMap from './reviewMap'
+import ReviewMap from './components/ReviewMap'
 import { GET_REVIEWS } from './graphql'
 import theme from '../../theme'
 
