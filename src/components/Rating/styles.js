@@ -37,7 +37,10 @@ export const EyeBox = styled.div`
 export const Eye = styled.div`
   width: 50px;
   height: 50px;
-  background: url(${({ rating, id }) => getRatingEye(rating, id).rating})
+  background: url(${({ rating, id, invert }) =>
+      invert
+        ? getRatingEye(rating, id).hover
+        : getRatingEye(rating, id).rating})
     no-repeat content-box center;
   background-size: 50px 50px;
   ${Container}:hover & {
