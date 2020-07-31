@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.blue};
   align-items: center;
-  color: white;
+  color: ${({ theme }) => theme.colors.whitish};
   box-shadow: inset -4px -4px 0px 0px ${({ theme }) => theme.colors.darkBlue};
   transition: box-shadow 0.2s ease-out;
   justify-content: space-between;
@@ -91,7 +91,7 @@ export const Button = styled.button`
 export const Go = styled.div`
   font-family: ${({ theme }) => theme.fonts.terminal};
   font-size: 1.5em;
-  color: white;
+  color: ${({ theme }) => theme.colors.whitish};
   display: none;
   ${Button}: hover & {
     display: inline;

@@ -14,7 +14,7 @@ export const InnerBox = styled.div`
   text-align: center;
   padding: 8px;
   text-decoration: none;
-  color: white;
+  color: ${({theme}) => theme.colors.whitish}
   box-shadow: inset -${outline}px -${outline * 0.6}px 0px 0px
     ${({ theme }) => theme.colors.lightGreen};
   transition: box-shadow 0.2s ease-out;

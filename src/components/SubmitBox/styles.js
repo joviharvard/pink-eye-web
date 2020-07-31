@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.blue};
   align-items: center;
-  color: white;
+  color: ${({ theme }) => theme.colors.whitish};
   box-shadow: inset -4px -4px 0px 0px ${({ theme }) => theme.colors.darkBlue};
   transition: box-shadow 0.2s ease-out;
   &:hover {

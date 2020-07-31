@@ -32,7 +32,7 @@ export const InnerContainer = styled.div`
 `
 
 export const RangeContainer = styled.div`
-  color: white;
+  color: ${({ theme }) => theme.colors.whitish};
   font-family: ${({ theme }) => theme.fonts.terminal};
   width: 100%;
   display: flex;
@@ -76,6 +76,6 @@ export const Text = styled.p`
   font-size: 0.9rem;
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.terminal};
-  color: white;
+  color: ${({ theme }) => theme.colors.whitish};
   padding: 6px;
 `

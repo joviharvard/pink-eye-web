@@ -5,5 +5,6 @@ export const ROUTE_PATHS = {
   LOGIN: '/login',
   REVIEWS: '/reviews',
   SUBMIT: '/submit',
-  MERCH: '/merch'
+  MERCH: '/merch',
+  SINGLE_REVIEW: '/review',
 }

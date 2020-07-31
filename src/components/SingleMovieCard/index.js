@@ -4,8 +4,9 @@ import { Container, InfoBox, Title, Director, Reviewer } from './styles'
 
 const SingleMovieCard = ({
   metaData: { movieTitle, director, rating, reviewer },
+  onClick,
 }) => (
-  <Container>
+  <Container onClick={() => onClick()}>
     <InfoBox>
       <Title class="unselectable"> {movieTitle} </Title>
       <Director class="unselectable">directed by {director}</Director>

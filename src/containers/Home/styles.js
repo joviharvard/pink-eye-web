@@ -9,19 +9,20 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  line-height: 1.5;
 `
 
 export const Header = styled.p`
   width: 100%;
   text-align: center;
   padding: 30px;
-  font-size: 3em;
+  font-size: 3.5em;
   font-family: ${({ theme }) => theme.fonts.terminal};
   user-select: none;
-  color: ${({ theme }) => theme.colors.pink || 'white'};
+  color: ${({ theme }) => theme.colors.pink};
 `
 
 export const Subheader = styled(Header)`
-  padding: 10px;
+  padding: 8px;
   font-size: 2em;
 `
